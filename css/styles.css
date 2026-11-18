@@ -1,0 +1,132 @@
+:root {
+    /* Main Color Palette  */
+    --color-primary-100: #173F35;
+    --color-primary-200: #F9F2E6;
+    --color-primary-300: #FFFDF7;
+    --color-primary-400: #233D34;
+    --color-primary-500: #913D50;
+    --color-primary-600: #EBCAC1;
+
+    /* Secondary Color Palette */
+    --color-secondary-100: #6C776F;
+    --color-secondary-200: #C4AA73;
+    --color-secondary-300: #F4E9D5;
+    --color-secondary-400: #CBD5BE;
+    --color-secondary-500: #E8C8BA;
+
+    /* Font Families */
+    --font-family-serif: 'Fraunces', Georgia, 'Times New Roman', serif;
+    --font-family-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+    /* Font Weights */
+    --font-weight-regular: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+
+    /* Type Scale (1rem = 16px default) */
+    --font-size-xs: 0.75rem;
+    /* 12px */
+    --font-size-sm: 0.875rem;
+    /* 14px */
+    --font-size-base: 1rem;
+    /* 16px */
+    --font-size-lg: 1.125rem;
+    /* 18px */
+    --font-size-xl: 1.25rem;
+    /* 20px */
+    --font-size-2xl: 1.5rem;
+    /* 24px */
+    --font-size-3xl: 2rem;
+    /* 32px */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 16% 1fr;
+    grid-template-rows: 12% 1fr;
+    grid-template-areas:
+        "nav topbar"
+        "nav main";
+    min-height: 100vh;
+}
+
+.sidebar {
+    background-color: var(--color-primary-100);
+    grid-area: nav;
+}
+
+.topbar {
+    background-color: var(--color-primary-300);
+    grid-area: topbar;
+}
+
+.dashboard-container {
+    background-color: var(--color-primary-200);
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 1.5rem;
+}
+
+.overview-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+}
+
+
+.dashboard-middle {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.dashboard-bottom {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 16px;
+}
+
+/* Mobile Layout */
+/* Styles for mobile */
+@media screen and (max-width: 576px) {
+    body {
+        margin: 0;
+        padding: 0;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 20% 1fr;
+        grid-template-areas:
+            "nav"
+            "main";
+        min-height: 100vh;
+    }
+    
+}
+
+
+
+
+
+.container-card {
+    border-radius: 18px;
+}
+.ivory-card {
+    background-color: var(--color-primary-300);
+}
+.total-budget {
+    background-color: var(--color-secondary-300);
+}
+.total-spent {
+    background-color: var(--color-secondary-400);
+}
+.amt-remaining {
+    background-color: var(--color-primary-100);
+}
+.gift-count {
+    background-color: var(--color-secondary-500);
+}
